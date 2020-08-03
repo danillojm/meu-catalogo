@@ -1,0 +1,53 @@
+<mat-sidenav-container class="sidenav-container ">
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false">
+    <div class="menu-header-sidenav">
+
+      <div class="menu-1">
+        <button mat-button class="btn-menu-close">
+          <mat-icon>
+            close
+          </mat-icon>
+        </button>
+
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="mat-toolbar mat-elevation-z1">
+
+      <div class="container div-header">
+
+        <button class="button-nav" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>Acessorios</span>
+      </div>
+    </mat-toolbar>
+
+    <mat-toolbar-row class="mat-toolbar-row mat-elevation-z1">
+      <div>
+        <button mat-button>
+
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+      <div>
+        <button mat-button>Tudo</button>
+        <button mat-button>Smartwatch</button>
+        <button mat-button>Cases</button>
+        <button mat-button>Fones</button>
+        <button mat-button>Games</button>
+        <button mat-button>Outros</button>
+      </div>
+
+
+    </mat-toolbar-row>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
