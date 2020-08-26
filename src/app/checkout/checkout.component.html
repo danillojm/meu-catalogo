@@ -1,0 +1,103 @@
+<section class="container">
+
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="flex-start" style="padding:5px">
+    <div fxFlex="60%" fxFlex.xs="100%" fxFlex.sm="100%">
+      <h1>
+        RESUMO E IDENTIFICAÇÃO</h1>
+      <div>
+
+        <mat-table [dataSource]="dataSource" #table class="mat-elevation-z8">
+          <!-- Position Column -->
+          <ng-container matColumnDef="product">
+            <mat-header-cell *matHeaderCellDef>Produto </mat-header-cell>
+            <mat-cell *matCellDef="let element" style="padding:10px">
+
+              <img [src]="element.product.image_path" style="width:30%">
+              {{element.product.name}}
+
+            </mat-cell>
+
+          </ng-container>
+
+          <ng-container matColumnDef="unitaryValue">
+            <mat-header-cell *matHeaderCellDef>valor unitário</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              {{element.product.price|currency:'BRL'}}
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="quantity">
+            <mat-header-cell *matHeaderCellDef>Qtd </mat-header-cell>
+            <mat-cell *matCellDef="let element">
+
+              <mat-form-field>
+
+                <input matInput #postalCode maxlength="2" style="padding-left: 30px" [(ngModel)]="element.quantity"
+                  [value]="element.quantity">
+
+              </mat-form-field>
+
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="valueTotal">
+            <mat-header-cell *matHeaderCellDef>Valor Total </mat-header-cell>
+            <mat-cell *matCellDef="let element" style="padding:0">
+              <div>
+                {{ element.product.price * element.quantity | currency:'BRL':true}}
+              </div>
+              <div>
+                <a class="close" (click)="deleteItem(element)">
+                  <i>x</i>
+                </a>
+              </div>
+            </mat-cell>
+
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+
+      </div>
+
+      <div class="div-totalValue">
+        <span> Total: {{total() |currency: 'BRL': true}} </span>
+
+      </div>
+    </div>
+
+    <div fxFlex="40%" fxFlex.xs="100%" fxFlex.sm="10%">
+
+      <div style="padding-top:10px">
+        <mat-card class="mat-elevation-z1">
+          <mat-card-title>Seus dados </mat-card-title>
+          <form>
+            <mat-form-field>
+              <input matInput placeholder="Nome" id="name" [(ngModel)]="client.name" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <br />
+            <mat-form-field>
+              <input matInput placeholder="Email" id="email" [(ngModel)]="client.email" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <br />
+            <mat-form-field>
+              <input matInput placeholder="Telefone" id="telephone" [(ngModel)]="client.telephone" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <br />
+            <mat-form-field appearance="fill">
+              <mat-label>Textarea</mat-label>
+              <textarea matInput id="msg"  [(ngModel)]="client.msg" [ngModelOptions]="{standalone: true}"></textarea>
+            </mat-form-field>
+            <button mat-button class="btn-finalize" [disabled]="disabledButtonClick()" (click)="finalize()" target="_blank"> Finalizar</button>
+            <button mat-button class="btn-finalize" [routerLink]="['']" style="margin-top:10px"> Continuar
+              comprando</button>
+          </form>
+        </mat-card>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</section>

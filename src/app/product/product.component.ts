@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-product',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private activeRouter: ActivatedRoute) { }
+
+  @Input()
+  product: Product;
+
+  @Output() addProduct = new EventEmitter();
 
   ngOnInit(): void {
   }
+
+
+  emitEvent() {
+    this.addProduct.emit(this.product);
+  }
+
 
 }
