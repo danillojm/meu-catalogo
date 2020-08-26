@@ -1,0 +1,180 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "tudo"
+    },
+    {
+      "id": 2,
+      "name": "smartwach"
+    },
+    {
+      "id": 3,
+      "name": "case"
+    },
+    {
+      "id": 4,
+      "name": "fones"
+    },
+    {
+      "id": 5,
+      "name": "game"
+    },
+    {
+      "id": 6,
+      "name": "pulseiras"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "SmartWach P8",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/c54320725b.jpg",
+      "category": "game",
+      "imgePatchList": [
+        {
+          "imgePatch": "./assets/img/airdots.jpg"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Mi Band 5",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/xiaomi_mi_band_5_01_l-1.jpg",
+      "category": "pulseiras",
+      "imgPatch": [
+        {
+          "imgePatch": "./assets/img/xiaomi_mi_band_5_01_l-1.jpg"
+        },
+        {
+          "imgePatch": "./assets/img/xiaomi_mi_band_5_02_ad_l.jpg"
+        },
+        {
+          "imgePatch": "./assets/img/xiaomi_mi_band_5_03_ad_l.jpg"
+        },
+        {
+          "imgePatch": "./assets/img/xiaomi_mi_band_5_04_ad_l.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "SmartWach P8",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/c54320725b.jpg",
+      "category": "case"
+    },
+    {
+      "id": 3,
+      "name": "SmartWach P8",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/c54320725b.jpg",
+      "category": 1
+    },
+    {
+      "id": 4,
+      "name": "SmartWach P8",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/c54320725b.jpg",
+      "category": 1
+    },
+    {
+      "id": 5,
+      "name": "SmartWach P8",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/c54320725b.jpg",
+      "category": 1
+    },
+    {
+      "id": 6,
+      "name": "SmartWach P8",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/c54320725b.jpg",
+      "category": 1
+    },
+    {
+      "id": 7,
+      "name": "SmartWach P8",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/c54320725b.jpg",
+      "category": 1
+    },
+    {
+      "id": 8,
+      "name": "SmartWach P8",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/c54320725b.jpg",
+      "category": "case"
+    },
+    {
+      "id": 9,
+      "name": "Redmi AirDots",
+      "description": "Redmi AirDots tem um estilo único. Possuem Bluetooth 5.0 que permite a conexão a longas distÂncias e oferece uma melhor resistência as interferências sem fio,",
+      "price": 180,
+      "imgePatch": "./assets/img/airdots.jpg",
+      "category": "fones",
+      "imgPatch": [
+        {
+          "imgePatch": "./assets/img/airdots.jpg"
+        },
+        {
+          "imgePatch": "./assets/img/airdots.jpg"
+        },
+        {
+          "imgePatch": "./assets/img/airdots.jpg"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "SmartWach P8",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/c54320725b.jpg",
+      "category": "smartwach"
+    },
+    {
+      "id": 11,
+      "name": "SmartWach DTx",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/dtx.jpg",
+      "category": "smartwach"
+    },
+    {
+      "id": 12,
+      "name": "SmartWach P8",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/c54320725b.jpg",
+      "category": "smartwach"
+    },
+    {
+      "id": 13,
+      "name": "SmartWach P8",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/c54320725b.jpg",
+      "category": "smartwach"
+    },
+    {
+      "id": 14,
+      "name": "SmartWach P8",
+      "description": "COLMI P8 é o nosso relógio inteligente de última geração",
+      "price": 180,
+      "imgePatch": "./assets/img/c54320725b.jpg",
+      "category": "smartwach"
+    }
+  ]
+}

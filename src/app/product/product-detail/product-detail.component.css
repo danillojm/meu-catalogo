@@ -1,0 +1,116 @@
+.div-filtro{
+  width: 48%;
+ float: left;
+ padding-top: 20px;
+ display: block;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+
+.div-content{
+  width: 50%;
+  float: right;
+ padding: 5px;
+}
+
+.div-content h1{
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+}
+
+/*#00B600;*/
+.btn-shopping{
+  width: 100%;
+  text-shadow: none;
+    border: none;
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 22px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+    background:  #008382;
+    padding: 5px 10px;
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin:0;
+
+}
+
+.filtro-header{
+  padding:0px
+}
+.section-info{
+  padding: 5px;
+}
+.span-category{
+  font-size: 11px;
+  font-weight:400;
+}
+
+.span-price{
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  float: left;
+  width: 100%;
+  margin: 10px;
+}
+
+
+
+
+@media (max-width: 768px){
+
+  .div-content{
+    width: 100%;
+   text-align: left;
+   margin-top: 0px;
+   padding: 0;
+   flex: auto;
+  }
+
+  .div-filtro{
+    width: 100%;
+   padding: 0px;
+  }
+
+  .div-content h1, .category{
+     display:none;
+  }
+  .filtro-header{
+    display: none;
+  }
+
+
+  .section-info h2{
+    padding: 0;
+    font-weight: 600;
+    margin: 2px 0;
+    font-size: 36px;
+    letter-spacing: 0.5px;
+  }
+
+  .section-info h6{
+    padding:0;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .section-info ul li{
+
+    font-size: 15px;
+    font-weight: 400;
+
+  }
+
+  }
+

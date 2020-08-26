@@ -1,0 +1,76 @@
+<div class="container">
+
+  <div class="div-filtro">
+
+        <owl-carousel-o [options]="customOptions">
+
+          <ng-container *ngFor="let slide of product?.img_patchs"  style="height: 100px;">
+            <ng-template carouselSlide [id]="slide.image_path">
+              <img [src]="slide.image_path">
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+
+
+  </div>
+
+  <div class="div-content">
+
+    <section class="section-info">
+
+
+      <span class="span-category">{{product?.category.name}} </span>
+      <h2>{{product?.name}} </h2>
+      <h6>Disponibilidade: 5</h6>
+
+
+      <ul>
+        <li>Tela 1.0 </li>
+        <li>Resistente a agua</li>
+      </ul>
+
+      <div>
+
+        <span style="">Selecione a opção de cor:</span>
+        <br>
+        <label class="example-margin">Align:</label>
+        <mat-radio-group>
+          <mat-radio-button class="example-margin" value="after">Vermelhot</mat-radio-button>
+          <mat-radio-button class="example-margin" value="before">Rosa</mat-radio-button>
+          <mat-radio-button class="example-margin" value="azul">Azul</mat-radio-button>
+        </mat-radio-group>
+
+
+      </div>
+
+
+      <span class="span-price">{{product?.price |currency:'BRL'}} </span>
+
+
+
+      <button mat-button class="btn-shopping" matTooltip="Info about the action" (click)="addProductCart()">
+
+        <mat-icon>
+
+          shopping_bag
+        </mat-icon>
+
+        Adicionar ao carrinho
+      </button>
+    </section>
+
+
+    <section>
+
+      <h2>Descrição</h2>
+
+      <span>{{product?.name}}</span>
+
+      <p>
+        {{product?.description }}
+      </p>
+
+    </section>
+
+  </div>
+</div>

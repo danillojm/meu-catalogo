@@ -1,0 +1,29 @@
+.menu-nav li{
+  list-style: none;
+  cursor: pointer;
+  margin-bottom: -20px
+}
+
+
+
+.menu-nav li a{
+  display: block;
+    line-height: 25px;
+    color: #444e5e;
+    font-size: 12px;
+    position: relative;
+    padding: 10px 30px 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+@media screen and (min-width: 768px){
+  .menu-nav-button{
+    display: none;
+  }
+.menu-nav-button span{
+  text-transform:uppercase;
+}
+}

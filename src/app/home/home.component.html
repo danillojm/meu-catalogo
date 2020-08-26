@@ -1,7 +1,90 @@
+<mat-toolbar-row class="mat-toolbar-row mat-elevation-z1">
+  <div>
+    <button mat-button>
+
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+
+  <app-category (getProductByCategory)="getProductByCategory($event)" *ngFor="let category of categories"
+    [category]="category"></app-category>
+
+
+
+</mat-toolbar-row>
 
 <div class="container">
 
-  <app-product></app-product>
+  <div class="div-filtro">
 
+    <nav class="nav-filtro">
+
+      <h3 fxLayoutAlign="center" >Categorias</h3>
+      <app-category fxLayoutAlign="center" (getProductByCategory)="getProductByCategory($event)" *ngFor="let category of categories"
+        [category]="category"></app-category>
+    </nav>
+
+    <div class="div-menu-info">
+
+      <div>
+
+        <a href="#">
+          <div class="div-img">
+            <img src="./assets/img/w.png" >
+          </div>
+          <div class="div-info-nav"> (081) 9 9720-7112 </div>
+        </a>
+
+        <a href="https://www.instagram.com/danillojmelo/" target="_blank">
+          <div class="div-img">
+            <img src="./assets/img/instagram.png">
+          </div>
+
+          <div class="div-info-nav">
+            @danillojmelo
+          </div>
+        </a>
+
+      </div>
+
+      <p>Equipe DM Acessorios</p>
+
+    </div>
+
+  </div>
+
+  <div class="div-content">
+
+    <div class="div-filtro-header">
+      <div class="div-header-category">
+
+
+        <h1 *ngIf="category == null"> Tudo </h1>
+
+
+        <h1 *ngIf="category?.name != null"> {{category?.name }} </h1>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="flex-start">
+
+
+
+      <app-product #product fxFlex="30%" fxFlex.xs="50%" fxFlex.sm="33%" *ngFor="let product of products"
+        [product]="product">
+      </app-product>
+
+
+      <div *ngIf="products.length == 0">
+        <span>Nenhum Produto foi encontrado para essa categoria</span>
+      </div>
+
+
+    </div>
+
+  </div>
 </div>
-

@@ -6,48 +6,75 @@
     <div class="menu-header-sidenav">
 
       <div class="menu-1">
-        <button mat-button class="btn-menu-close">
+        <i class="btn-menu-close">
           <mat-icon>
             close
           </mat-icon>
-        </button>
+        </i>
 
       </div>
+
+
+      <div class="div-menu-info">
+
+        <div>
+
+          <a href="#">
+            <div class="div-img">
+              <img src="./assets/img/w.png" >
+            </div>
+            <div class="div-info-nav"> (081) 9 9720-7112 </div>
+          </a>
+
+          <a href="https://www.instagram.com/danillojmelo/">
+            <div class="div-img">
+              <img src="./assets/img/instagram.png">
+            </div>
+
+            <div class="div-info-nav">
+              @danillojmelo
+            </div>
+          </a>
+
+        </div>
+
+        <p>Equipe DM Acessorios</p>
+
+      </div>
+
     </div>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content class="sidenav-content">
     <mat-toolbar class="mat-toolbar mat-elevation-z1">
 
-      <div class="container div-header">
+      <div class="container">
 
-        <button class="button-nav" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
-          *ngIf="isHandset$ | async">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button>
-        <span>Acessorios</span>
+
+          <i class="button-nav"   aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+            *ngIf="isHandset$ | async">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </i>
+
+
+        <div fxLayoutGap="2rem" fxLayoutAlign="left" fxFlex="50%" fxFlex.xs="70%" fxFlex.sm="33%">
+          <a [routerLink]="['/']">
+            <img src="./assets/img/logo-teste.jpg" class="img-logo" fxFlex="60%" fxFlex.xs="100%">
+          </a>
+        </div>
+
+        <div fxFlex="80%" fxFlex.xs="0%" fxFlex.sm="33%" fxLayoutWrap fxLayoutGap="2rem" fxLayoutAlign="center">
+          <div>
+            <app-shopping-cart></app-shopping-cart>
+
+          </div>
+
+
+        </div>
+
+
       </div>
     </mat-toolbar>
-
-    <mat-toolbar-row class="mat-toolbar-row mat-elevation-z1">
-      <div>
-        <button mat-button>
-
-          <mat-icon>search</mat-icon>
-        </button>
-      </div>
-      <div>
-        <button mat-button>Tudo</button>
-        <button mat-button>Smartwatch</button>
-        <button mat-button>Cases</button>
-        <button mat-button>Fones</button>
-        <button mat-button>Games</button>
-        <button mat-button>Outros</button>
-      </div>
-
-
-    </mat-toolbar-row>
-
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

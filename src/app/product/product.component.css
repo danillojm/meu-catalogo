@@ -4,4 +4,56 @@
 
 .content > mat-card {
   width: 200px;
+  cursor: pointer;
+}
+
+.mt-card:hover{
+  cursor: pointer;
+  display: block;
+
+}
+.card-header{
+  margin: 0;
+  padding: 0;
+}
+.mat-card-product:hover{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.mat-button-card{
+  box-sizing: border-box;
+  color: white;
+  background:black;
+  width: 100%;
+  font-size:12px;
+  font-weight: 400;
+  border-radius: 5px;
+  justify-content:center;
+  text-align: center;
+  text-transform: lowercase;
+  display: block;
+  font-size: 12px;
+  padding: 0px;
+  display:flex;
+  margin: 0;
+}
+
+
+.mat-button-card:hover{
+  color: #fff;
+  background:rgb(20, 20, 20);
+}
+
+
+@media screen and (max-width: 768px){
+  .mat-card-product{
+    width: 80%;
+    height: 350px;
+  }
+
+  .mat-button-card{
+   margin-top: 440px
+  }
 }

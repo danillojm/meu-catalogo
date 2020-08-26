@@ -1,0 +1,38 @@
+form{
+  display:flex;
+  flex-direction: column;
+}
+
+.div-totalValue{
+  float: right;
+  padding: 10px;
+}
+
+.close{
+  left: 50px;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #e8e9ea;
+  border: 2px solid white;
+  color: #444e5e;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+.close i {
+  z-index: 0;
+  border-radius: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  background-color: #FF4E4E;
+  cursor: pointer;
+}
